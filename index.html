@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeTIK Jombang - Pesantren Teknologi Informasi dan Komunikasi</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-blue-950 tracking-tight">PeTIK<span class="text-blue-600">Jombang</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#profil" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Profil</a>
+                    <a href="#kerjasama" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Kerjasama</a>
+                    <a href="#berita" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Berita</a>
+                    <a href="#" class="px-5 py-2.5 bg-blue-50 text-blue-600 font-semibold rounded-lg hover:bg-blue-100 transition-colors border border-blue-200">
+                        Dashboard Magang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white min-h-[90vh] flex items-center">
+        <!-- Abstract Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute left-0 top-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)"></path>
+                <defs>
+                    <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+                        <path d="M 8 0 L 0 0 0 8" fill="none" stroke="white" stroke-width="0.5"></path>
+                    </pattern>
+                </defs>
+            </svg>
+        </div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-24 -left-24 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="text-center lg:text-left">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-800/50 border border-blue-400/30 text-blue-200 text-sm font-semibold mb-6 backdrop-blur-sm">
+                        <i class="fa-solid fa-award mr-2"></i>Program Beasiswa YBM PLN
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        Pesantren yang Melahirkan <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-teal-200">Santri dengan Kemampuan IT</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Selamat datang di PeTIK Jombang. Program beasiswa pendidikan IT 1 tahun untuk dhuafa dengan fasilitas boarding terbaik dari YBM PLN.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" class="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                            Pendaftaran Mahasantri Baru <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="px-8 py-4 bg-transparent border-2 border-blue-300 hover:border-white hover:bg-white/10 text-white font-bold rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Hubungi Kami via WA
+                        </a>
+                    </div>
+                </div>
+                <!-- Hero Image/Illustration (Placeholder) -->
+                <div class="hidden lg:block relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://placehold.co/800x600/1e3a8a/ffffff?text=PeTIK+Jombang+Campus" alt="Campus" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Lulusan Siap Kerja</p>
+                            <p class="font-bold text-gray-900">100% Terjamin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="py-24 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-blue-600 font-bold tracking-wide uppercase text-sm mb-2">Mengapa Memilih Kami</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">9 Keunggulan PeTIK Jombang</h3>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gratis Biaya Pendidikan</h4>
+                    <p class="text-gray-600 leading-relaxed">Beasiswa penuh 100% untuk kaum dhuafa yang ingin merubah masa depan melalui teknologi.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fasilitas IT & Boarding</h4>
+                    <p class="text-gray-600 leading-relaxed">Asrama nyaman dan laboratorium komputer spesifikasi tinggi untuk menunjang pembelajaran 24/7.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Uang Saku Bulanan</h4>
+                    <p class="text-gray-600 leading-relaxed">Mahasantri mendapatkan uang saku setiap bulan selama masa pendidikan berlangsung.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fokus IT Masa Kini</h4>
+                    <p class="text-gray-600 leading-relaxed">Kurikulum terstruktur berfokus pada Rekayasa Perangkat Lunak (RPL) dan Digital Marketing.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sertifikasi + Tahfidz</h4>
+                    <p class="text-gray-600 leading-relaxed">Bonus sertifikasi kompetensi nasional dan program pembinaan Tahfidz Qur'an.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Satu Tahun Siap Kerja</h4>
+                    <p class="text-gray-600 leading-relaxed">Program intensif 1 tahun yang dirancang agar lulusan siap terjun langsung ke dunia industri profesional.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gratis Biaya Keberangkatan</h4>
+                    <p class="text-gray-600 leading-relaxed">Biaya transportasi keberangkatan dari daerah asal menuju pesantren ditanggung sepenuhnya.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-book-quran"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Karakter Ahlus Sunnah</h4>
+                    <p class="text-gray-600 leading-relaxed">Pembinaan akhlak dan karakter Islami sesuai dengan pemahaman Ahlus Sunnah wal Jama'ah.</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Kerjasama Dunia Industri</h4>
+                    <p class="text-gray-600 leading-relaxed">Kemitraan luas dengan berbagai perusahaan IT untuk penyaluran magang dan tenaga kerja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-gray-300 py-16 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
+                
+                <!-- Column 1: Info & Address -->
+                <div class="lg:col-span-8">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold shadow-lg">
+                            <i class="fa-solid fa-laptop-code text-sm"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white tracking-tight">PeTIK<span class="text-blue-400">Jombang</span></span>
+                    </div>
+                    <h5 class="text-lg font-bold text-white mb-4">Lembaga Pendidikan di Bawah Naungan YBM PLN</h5>
+                    <p class="mb-4 text-gray-400 max-w-lg leading-relaxed">
+                        Mencetak generasi muda yang mandiri, berkarakter Islami, dan memiliki kompetensi tinggi di bidang Teknologi Informasi dan Komunikasi.
+                    </p>
+                    <div class="flex items-start gap-3 text-gray-400">
+                        <i class="fa-solid fa-location-dot mt-1 text-blue-400"></i>
+                        <p>
+                            Jl. KH. Bisri Syansuri, Plosogeneng<br>
+                            Kec. Jombang, Kabupaten Jombang<br>
+                            Jawa Timur 61416
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Social & Contact -->
+                <div class="lg:col-span-4">
+                    <h5 class="text-lg font-bold text-white mb-6 uppercase tracking-wider text-sm">Kontak & Sosial Media</h5>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li>
+                            <a href="#" class="flex items-center gap-3 hover:text-white transition-colors">
+                                <i class="fa-brands fa-whatsapp text-xl text-green-400 w-6"></i>
+                                <span>+62 812-3456-7890</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@petikjombang.com" class="flex items-center gap-3 hover:text-white transition-colors">
+                                <i class="fa-solid fa-envelope text-xl text-blue-400 w-6"></i>
+                                <span>info@petikjombang.com</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all transform hover:-translate-y-1">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform hover:-translate-y-1">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-blue-900/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2025 PeTIK Jombang. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
